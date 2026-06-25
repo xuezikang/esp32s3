@@ -1,4 +1,4 @@
-# ESP32-S3 Portable Health Monitor
+﻿# ESP32-S3 Portable Health Monitor
 
 An ESP-IDF demo project for a portable medical health monitor based on ESP32-S3. It recreates the resume project chain:
 
