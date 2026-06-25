@@ -1,0 +1,8 @@
+#pragma once
+
+#include "sdkconfig.h"
+
+#define HEALTH_MONITOR_SAMPLE_PERIOD_MS 1000
+#define HEALTH_MONITOR_QUEUE_DEPTH 4
+#define HEALTH_MONITOR_I2C_PORT I2C_NUM_0
+#define HEALTH_MONITOR_SPI_HOST SPI2_HOST

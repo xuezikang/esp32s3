@@ -1,0 +1,65 @@
+menu "Portable Health Monitor"
+
+    config HEALTH_MONITOR_SIMULATE_SENSOR
+        bool "Use simulated heart-rate and SpO2 samples"
+        default y
+        help
+            Enable this option to run the complete demo without MAX30102 hardware.
+
+    config HEALTH_MONITOR_WIFI_SSID
+        string "Wi-Fi SSID"
+        default ""
+
+    config HEALTH_MONITOR_WIFI_PASSWORD
+        string "Wi-Fi password"
+        default ""
+
+    config HEALTH_MONITOR_MQTT_URI
+        string "MQTT broker URI"
+        default "mqtt://broker.emqx.io"
+
+    config HEALTH_MONITOR_MQTT_TOPIC
+        string "MQTT telemetry topic"
+        default "esp32s3/health-monitor/telemetry"
+
+    config HEALTH_MONITOR_I2C_SDA_GPIO
+        int "MAX30102 I2C SDA GPIO"
+        default 8
+        range 0 48
+
+    config HEALTH_MONITOR_I2C_SCL_GPIO
+        int "MAX30102 I2C SCL GPIO"
+        default 9
+        range 0 48
+
+    config HEALTH_MONITOR_LCD_MOSI_GPIO
+        int "NV3030B SPI MOSI GPIO"
+        default 11
+        range 0 48
+
+    config HEALTH_MONITOR_LCD_SCLK_GPIO
+        int "NV3030B SPI SCLK GPIO"
+        default 12
+        range 0 48
+
+    config HEALTH_MONITOR_LCD_CS_GPIO
+        int "NV3030B SPI CS GPIO"
+        default 10
+        range 0 48
+
+    config HEALTH_MONITOR_LCD_DC_GPIO
+        int "NV3030B data/command GPIO"
+        default 13
+        range 0 48
+
+    config HEALTH_MONITOR_LCD_RST_GPIO
+        int "NV3030B reset GPIO"
+        default 14
+        range 0 48
+
+    config HEALTH_MONITOR_LCD_BL_GPIO
+        int "NV3030B backlight GPIO"
+        default 15
+        range 0 48
+
+endmenu
